@@ -4,9 +4,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 
-public class Test {
+public class MainPageSearchTest {
 
-    private DriverWrapper wrapper = new DriverWrapper();
+    private final DriverWrapper wrapper = new DriverWrapper();
 
     @BeforeEach
     public void beforeEach(){

@@ -1,5 +1,6 @@
 package Pages;
 
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,7 +22,7 @@ public class HomePage extends Page {
     }
 
     public HomePage checkHomePageLoaded(){
-        assert(searchInput.isDisplayed());
+        Assertions.assertTrue(searchInput.isDisplayed());
         return this;
     }
 

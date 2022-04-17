@@ -1,5 +1,6 @@
 package Pages;
 
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -34,7 +35,7 @@ public class SearchResultPage extends Page {
     }
 
     public SearchResultPage checkSearchResultLabelIsDisplayed(){
-        assert(searchResultsLabel.isDisplayed());
+        Assertions.assertTrue(searchResultsLabel.isDisplayed());
         return this;
     }
 }
