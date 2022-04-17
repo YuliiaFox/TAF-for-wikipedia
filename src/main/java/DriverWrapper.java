@@ -8,18 +8,22 @@ import java.util.Locale;
 public class DriverWrapper {
     private WebDriver driver;
 
+    private enum Browsers{
+        CHROME, FIREFOX
+    }
+
     public DriverWrapper() {
     }
 
     public void init(String url) {
-        String browser = System.getProperty("browser");
+        Browsers browser = Browsers.valueOf(System.getProperty("browser").toUpperCase(Locale.ROOT));
 
-        switch (browser.toLowerCase(Locale.ROOT)) {
-            case "chrome":
+        switch (browser) {
+            case CHROME:
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
                 break;
-            case "firefox":
+            case FIREFOX:
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
                 break;
